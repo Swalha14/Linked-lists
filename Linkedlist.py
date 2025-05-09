@@ -89,9 +89,9 @@ print("The list contains:",my_list.display())
 
 print("Size =", my_list.get_size())
 my_list.remove(82)
-print("Size =", my_list.get_size())
+print("Size after removing 82=", my_list.get_size())
 print(my_list.remove(124))
-print("The final list contains:",my_list.display())
 
-print("Size =", my_list.get_size())
+print("Size after removing 124 =", my_list.get_size())
 print(my_list.find(51))
+print("The final list contains:",my_list.display())
