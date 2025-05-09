@@ -4,19 +4,23 @@ class Node:
         self.data = data                # Holds the value of the node
         self.next_node = next_node      # Points to the next node in the list
 
-    # Getter for next node
+        # Getter for next node
+
     def get_next(self):
         return self.next_node
 
-    # Setter for next node
+        # Setter for next node
+
     def set_next(self, next_node):
         self.next_node = next_node
 
-    # Getter for data
+        # Getter for data
+
     def get_data(self):
         return self.data
 
-    # Setter for data
+        # Setter for data
+
     def set_data(self, data):
         self.data = data
 
@@ -64,17 +68,30 @@ class LinkedList:
                 return data  # Data found
             current_node = current_node.get_next()
         return None  # Data not found
+     #To display the elements in the list
+    def display(self):
+        result = ""
+        current_node = self.root
+        while current_node:
+            result += f"{current_node.get_data()} -> "
+            current_node = current_node.get_next()
+        result += "None"
+        return result
 
 
-# Example usage
+
 my_list = LinkedList()
 my_list.add(51)
 my_list.add(82)
 my_list.add(124)
 
+print("The list contains:",my_list.display())
+
 print("Size =", my_list.get_size())
 my_list.remove(82)
 print("Size =", my_list.get_size())
 print(my_list.remove(124))
+print("The final list contains:",my_list.display())
+
 print("Size =", my_list.get_size())
 print(my_list.find(51))
